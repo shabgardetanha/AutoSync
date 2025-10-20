@@ -1,0 +1,21 @@
+{
+  "core_name": "autosync_final_core_v2",
+  "version": "1.2.1",
+  "db_path": "autosync.db",
+  "lock_file": "core/core.lock",
+  "push_retry_interval_sec": 2,
+  "max_retries": 3,
+  "snapshot_folder": "test_patch/snapshots",
+  "patch_folder": "test_patch/batches",
+  "dashboard_config": "dashboard/dashboard_config.json",
+  "notifications_config": "notifications/notifications_config.json",
+  "analytics_feedback_file": "analytics_feedback/lessons_learned.json",
+  "github": {
+    "repo": "username/repo",
+    "token": "YOUR_GITHUB_TOKEN",
+    "branch": "main"
+  },
+  "retry_interval": 5,
+  "retry_limit": 5,
+  "retry_delay": 2
+}

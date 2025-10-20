@@ -1,0 +1,65 @@
+{
+  "current_core": "autosync_final_core_v2",
+  "core_package": "CI_CD_Final_Integrated_v1.0",
+  "version": "1.2.0",
+  "last_updated": "2025-10-19",
+  "description": "Unified AutoSync CI/CD pipeline integrating report, KPI, and manifest validation across core modules.",
+  "files": [
+    "core/auto_sync_core.py",
+    "core/github_sync.py",
+    "core/retry_lock_manager.py",
+    "core/core_config.json",
+    "config/ci_cd_config.json",
+    "tools/auto_report.py",
+    "docs/summary_final.md",
+    ".github/workflows/ci_cd_pipeline.yml",
+    "requirements.txt"
+  ],
+  "dependencies": [
+    "pyyaml>=6.0",
+    "requests>=2.28",
+    "pandas>=2.0",
+    "rich>=13.0"
+  ],
+  "integrations": {
+    "reports_to": "docs/summary_final.md",
+    "reads_from": ["core_manifest.json", "db/kpi_results.db"],
+    "writes_to": ["docs/summary_final.md"]
+  },
+  "qa_checks": {
+    "unit_tests": "tests/run_tests.py",
+    "report_generation": "tools/auto_report.py",
+    "ci_cd_pipeline": ".github/workflows/ci_cd_pipeline.yml"
+  },
+  "status": "active",
+  "maintainer": {
+    "name": "AutoSync System",
+    "contact": "autosync-bot@system.local"
+  }
+}
+
+
+{
+  "current_core": "autosync_final_core_v2",
+  "files": [
+    "core/auto_sync_core.py",
+    "core/github_sync.py",
+    "core/retry_lock_manager.py",
+    "core/core_config.json",
+    "dashboard/dashboard_config.json",
+    "connectors/connectors_config.json",
+    "analytics_feedback/lessons_learned.json"
+    "test_patch/test_suite.py",
+    "test_patch/patch_batch_runner.py",
+    "dashboard/dashboard_main.py",
+    "analytics_feedback/trend_analytics.py",
+    "analytics_feedback/continuous_improvement.py",
+    "notifications/notifications.py",
+    "ci_cd/ci_cd_runner.py"
+    "ci_cd/auto_bump_pipeline.yml",
+    "core/utils/auto_version_bump.py"
+
+  ],
+  "version": "2.0.0",
+  "last_updated": "2025-10-19"
+}

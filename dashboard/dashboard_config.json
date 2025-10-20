@@ -1,0 +1,11 @@
+{
+  "dashboard_name": "autosync_dashboard",
+  "display_kpis": ["total_pushes", "total_tests", "total_patches_applied"],
+  "refresh_interval_sec": 5,
+  "alert_thresholds": {
+    "failed_tests": 1,
+    "retry_exceeded": 2
+  },
+  "kpi_refresh_interval": 60,
+  "dashboard_port": 8050
+}

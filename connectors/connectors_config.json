@@ -1,0 +1,10 @@
+{
+  "slack": {
+    "webhook": "YOUR_SLACK_WEBHOOK"
+  },
+  "email": {
+    "smtp_server": "smtp.example.com",
+    "user": "user@example.com",
+    "password": "password"
+  }
+}

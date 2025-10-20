@@ -1,0 +1,64 @@
+{
+  "Initialization": {
+    "Step_0.1": "بارگذاری مرجع واحد پروژه شامل DB/Snapshot، Configها، Markdownها و آخرین وضعیت Patch/Test/KPI.",
+    "Step_0.2": "بررسی کامل وابستگی‌ها بین ماژول‌ها و اطمینان از اتصال Core → Patch/Test → Dashboard → Notifications → Analytics.",
+    "Step_0.3": "ثبت وضعیت اولیه پروژه به عنوان baseline برای مقایسه با نسخه‌های قبلی."
+  },
+  "Comparison_with_Previous": {
+    "Step_1.1": "خواندن خروجی آخرین چت و استخراج تمام فایل‌ها، ماژول‌ها و جریان‌های عملیاتی.",
+    "Step_1.2": "مقایسه تمام اطلاعات جدید با نسخه قبلی: تغییرات فایل‌ها، Patchها، KPIها و Lessons Learned.",
+    "Step_1.3": "ثبت تغییرات و نقاط متفاوت به صورت Highlight تا هیچ چیزی از قلم نیفتد."
+  },
+  "Core_Execution": {
+    "Step_2.1": "راه‌اندازی Core Engine (Push/Retry/Lock) با استفاده از DB و core_config.json.",
+    "Step_2.2": "اجرای Push تستی و بررسی Retry و Lock برای اطمینان از صحت جریان.",
+    "Step_2.3": "ثبت نتایج اجرای Core در logs و به‌روزرسانی DB."
+  },
+  "Patch_and_Test": {
+    "Step_3.1": "اجرای Test Suite واقعی با test_suite.py و ثبت نتایج در test_results.json یا DB.",
+    "Step_3.2": "اجرای Patch Batch واقعی با patch_batch_runner.py و ثبت تمام Patchها در DB.",
+    "Step_3.3": "مقایسه نتایج با Snapshotهای اولیه و ثبت تفاوت‌ها و اصلاحات لازم."
+  },
+  "Dashboard_and_KPI": {
+    "Step_4.1": "راه‌اندازی Dashboard با dashboard_main.py و اتصال به داده‌های DB واقعی.",
+    "Step_4.2": "نمایش KPIها و مقایسه با نسخه‌های قبلی.",
+    "Step_4.3": "ثبت هر تغییر یا anomaly در dashboard_logs.json یا DB."
+  },
+  "Notifications_and_CI_CD": {
+    "Step_5.1": "فعال‌سازی Notifications و تست هشدارها با notifications.py.",
+    "Step_5.2": "اجرای CI/CD Pipeline با ci_cd_runner.py و Push تستی.",
+    "Step_5.3": "ثبت پاسخ هشدارها و اجرای Pipeline در DB برای مقایسه آینده."
+  },
+  "Analytics_and_Feedback": {
+    "Step_6.1": "اجرای trend_analytics.py و ثبت Lessons Learned در analytics_feedback/lessons_learned.json یا DB.",
+    "Step_6.2": "اجرای continuous_improvement.py و ثبت پیشنهادات به feedback_loop.json یا DB.",
+    "Step_6.3": "مقایسه تغییرات با نسخه‌های قبلی و ثبت نقاط متفاوت."
+  },
+  "Documentation": {
+    "Step_7.1": "به‌روزرسانی Markdownهای پروژه (roadmap، summaries، KPI analysis) با آخرین داده‌ها.",
+    "Step_7.2": "اطمینان از پوشش همه فایل‌ها و مرحله‌ها با Markdownها.",
+    "Step_7.3": "ثبت مستندات به عنوان مرجع برای چت بعدی."
+  },
+  "End_of_Chat": {
+    "Step_8.1": "مقایسه نهایی با baseline و نسخه‌های قبلی.",
+    "Step_8.2": "ثبت تمام تغییرات در یک Summary JSON برای چت بعدی.",
+    "Step_8.3": "ذخیره کامل وضعیت پروژه در DB/Snapshot/Markdown برای ادامه در چت جدید."
+  },
+  "Release_Management": {
+    "Step_9.1": "ثبت نسخه نهایی پروژه در master_snapshot_vX_X.md.",
+    "Step_9.2": "تهیه changelog برای تمام Patchهای اعمال شده و KPIها.",
+    "Step_9.3": "آماده‌سازی بسته انتشار (release_distribution_package.md) برای تیم و کاربران."
+  },
+  "Future_Versions_and_Training": {
+    "Step_10.1": "ثبت roadmap و future_versions_roadmap.md برای نسخه‌های بعدی.",
+    "Step_10.2": "تهیه آموزش و demo package با training_demo_package.md.",
+    "Step_10.3": "به‌روزرسانی continuous_feedback_maintenance.md و آموزش onboarding."
+  },
+  "Guidelines": {
+    "G1": "همیشه مرحله به مرحله پیش برو، بدون رد کردن هیچ فایل یا ماژول.",
+    "G2": "مقایسه با نسخه قبلی ضروری است؛ هیچ اطلاعاتی نباید از بین برود.",
+    "G3": "تمام تغییرات Patch/Test/KPI/Feedback باید ثبت و traceable باشند.",
+    "G4": "Markdownها و Documentation باید همیشه کامل و مطابق استاندارد جهانی باشند.",
+    "G5": "در هر مرحله، چالش‌ها و ریسک‌ها را ثبت کن و برای مراحل بعد راهکار ارائه بده."
+  }
+}

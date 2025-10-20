@@ -1,0 +1,10 @@
+{
+  "notification_name": "autosync_notifications",
+  "channels": ["console", "email"],
+  "email": {
+    "smtp_server": "smtp.example.com",
+    "port": 587,
+    "from": "autosync@example.com",
+    "to": ["dev_team@example.com"]
+  }
+}

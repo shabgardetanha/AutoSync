@@ -1,0 +1,11 @@
+{
+  "enable_auto_report": true,
+  "auto_push": true,
+  "run_after_test": true,
+  "branch_target": "main",
+  "commit_signature": "AutoSync Report Generation",
+  "report_path": "docs/summary_final.md",
+  "manifest_path": "core_manifest.json",
+  "kpi_db_path": "db/kpi_results.db",
+  "skip_ci_tag": "[skip ci]"
+}
