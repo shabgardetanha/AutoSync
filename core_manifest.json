@@ -13,7 +13,19 @@
     "tools/auto_report.py",
     "docs/summary_final.md",
     ".github/workflows/ci_cd_pipeline.yml",
-    "requirements.txt"
+    "requirements.txt",
+    "dashboard/dashboard_config.json",
+    "connectors/connectors_config.json",
+    "analytics_feedback/lessons_learned.json",
+    "test_patch/test_suite.py",
+    "test_patch/patch_batch_runner.py",
+    "dashboard/dashboard_main.py",
+    "analytics_feedback/trend_analytics.py",
+    "analytics_feedback/continuous_improvement.py",
+    "notifications/notifications.py",
+    "ci_cd/ci_cd_runner.py",
+    "ci_cd/auto_bump_pipeline.yml",
+    "core/utils/auto_version_bump.py"
   ],
   "dependencies": [
     "pyyaml>=6.0",

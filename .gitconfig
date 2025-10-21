@@ -1,13 +1,20 @@
-[diff]
-    tool = Araxis
-    guitool = Araxis
-[difftool "Araxis"]
-    cmd = \"C:\\Program Files\Araxis\\Araxis Merge\\Compare.exe\"
-    prompt = false
-    path = C:\\Program Files\Araxis\\Araxis Merge\\Compare.exe
-
 [merge]
     tool = Araxis
+[mergetool "kdiff3"]
+    path = c:/Program Files (x86)/KDiff3/kdiff3.exe
+[diff]
+    guitool = araxis
+    tool = araxis
+[difftool "kdiff3"]
+    path = c:/Program Files (x86)/KDiff3/kdiff3.exe
+[difftool]
+    prompt = false
+[difftool "Araxis"]
+    path = C:/Program Files/Araxis/Araxis Merge/Compare.exe
+    cmd = \"c:/Program Files/Araxis/Araxis Merge/Compare.exe\" -wait -merge -3 -a1 \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 [mergetool "Araxis"]
-    path = C:\Program Files\Araxis\Araxis Merge\Merge.exe
-    trustExitCode = false
+    path = C:/Program Files/Araxis/Araxis Merge/Compare.exe
+    cmd = \"c:/Program Files/Araxis/Araxis Merge/Compare.exe\" -wait -merge -3 -a1 \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[difftool "araxis"]
+    path = C:/Program Files/Araxis/Araxis Merge/Compare.exe
+    cmd = \"c:/Program Files/Araxis/Araxis Merge/Compare.exe\" -wait -merge -3 -a1 \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"

@@ -136,5 +136,36 @@ jobs:
       - name: Install Dependencies
         run: pip install -r requirements.txt
 
+      - name: Run Auto Version Bump
+        run: |
+          echo "🟦 Running auto_version_bump.py ..."
+          python core/utils/auto_version_bump.py
+
       - name: Deploy Demo / Training Package
         run: python tools/deploy_demo.py
+
+      - name: Run Test Suite
+        run: |
+          if [ -f tests/run_tests.py ]; then
+            python tests/run_tests.py
+          else
+            echo "No tests/run_tests.py found — skipping tests."
+          fi
+
+      - name: Generate AutoSync Summary Report
+        run: |
+          python tools/auto_report.py
+
+      - name: Commit & Push Summary Report
+        env:
+          GIT_COMMITTER_NAME: "AutoSync Bot"
+          GIT_COMMITTER_EMAIL: "autosync-bot@system.local"
+        run: |
+          git config user.name "$GIT_COMMITTER_NAME"
+          git config user.email "$GIT_COMMITTER_EMAIL"
+          git add docs/summary_final.md || true
+          git commit -m "Auto-generated summary report [skip ci]" || echo "No changes to commit"
+          git push origin HEAD:main || echo "Push failed or nothing to push"
+
+      - name: Finish
+        run: echo "CI/CD pipeline finished."

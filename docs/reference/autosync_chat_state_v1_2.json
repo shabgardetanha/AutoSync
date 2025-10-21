@@ -1,0 +1,93 @@
+{
+  "autosync_chat_state": {
+    "meta": {
+      "version": "v1.2",
+      "model": "GPT-5",
+      "project_name": "AutoSync Final Core",
+      "created_at": "2025-10-18T21:55+0330",
+      "last_phase": "Phase_8_End_of_Chat",
+      "description": "Snapshot کامل وضعیت فعلی Chat برای ادامه تحلیلی بدون از دست دادن Context."
+    },
+    "system_layer": {
+      "language_policy": "Persian (fa-IR) priority",
+      "format_policy": "JSON برای تحلیل، Markdown برای مستندات",
+      "security_rules": [
+        "no sensitive data storage unless explicitly requested",
+        "no hidden reasoning disclosure",
+        "context integrity protection active"
+      ]
+    },
+    "user_layer": {
+      "role": "تحلیل‌گر حرفه‌ای پروژه‌های توسعه کد",
+      "analysis_style": {
+        "thinking_mode": "thinking hard / thinking longer",
+        "output_format": "JSON",
+        "comparison_required": true,
+        "risk_first_then_strength": true,
+        "metrics": ["Impact", "Confidence", "Effort", "Risk"],
+        "traceability_required": true,
+        "previous_answer_consistency": true
+      },
+      "communication_preferences": {
+        "language": "Persian",
+        "tone": "تحلیلی و واقع‌گرایانه",
+        "verbosity": "high",
+        "depth": "root-cause level"
+      }
+    },
+    "adaptive_layer": {
+      "active_modules": [
+        "root_cause_analysis",
+        "context_continuity_check",
+        "cross_phase_comparison",
+        "version_snapshot_alignment",
+        "adaptive_depth_scaling",
+        "auto_lessons_learned_extraction",
+        "risk_weight_balancing",
+        "incremental_context_memory_emulation"
+      ],
+      "learning_bias": {
+        "accuracy_over_speed": true,
+        "avoid_redundancy": 0.88,
+        "depth_priority_weight": 0.95,
+        "context_trace_weight": 0.9
+      },
+      "trigger_rules": {
+        "if_user_says_بله": "advance_phase",
+        "if_user_says_دقیق_تر_بگرد": "increase_search_depth_20",
+        "if_user_mentions_نسخه_or_مقایسه": "activate_version_diff_mode",
+        "if_user_mentions_lessons_learned": "trigger_feedback_update"
+      }
+    },
+    "runtime_flags": {
+      "compare_with_previous_answer": true,
+      "traceability_mode": "strict",
+      "contextual_continuity": "enabled",
+      "snapshot_comparison_active": true,
+      "auto_phase_tracker": "v1.2",
+      "db_reference_active": true,
+      "risk_matrix_mode": "4D",
+      "patch_tracking_enabled": true,
+      "dashboard_mode": "analytic_summary",
+      "ci_cd_pipeline_state": "simulated",
+      "lessons_learned_auto_update": true
+    },
+    "temporal_context": {
+      "conversation_start": "2025-10-18T20:10+0330",
+      "conversation_phase": "Phase_7_Documentation → Phase_8_End_of_Chat",
+      "previous_checkpoints": [
+        "autosync_final_core_v2 validated",
+        "60 markdown + python files verified",
+        "core/config alignment checked",
+        "phase comparison with v1.1 complete"
+      ]
+    },
+    "usage_guidelines": {
+      "step_1": "در چت جدید این فایل را ارسال کن تا context فعال شود.",
+      "step_2": "پس از بارگذاری، من به‌طور خودکار به Phase بعدی (Execution یا Optimization) می‌روم.",
+      "step_3": "هر بار که تغییری انجام دهی، نسخه جدیدی از این فایل ذخیره می‌شود.",
+      "step_4": "در صورت بروز خطا، می‌توان این state را به عنوان baseline مجدد بارگذاری کرد.",
+      "step_5": "برای شروع مجدد از Phase خاص، فقط فیلد 'last_phase' را تغییر بده."
+    }
+  }
+}

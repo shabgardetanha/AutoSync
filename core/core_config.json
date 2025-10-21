@@ -10,11 +10,8 @@
   "dashboard_config": "dashboard/dashboard_config.json",
   "notifications_config": "notifications/notifications_config.json",
   "analytics_feedback_file": "analytics_feedback/lessons_learned.json",
-  "github": {
-    "repo": "username/repo",
-    "token": "YOUR_GITHUB_TOKEN",
-    "branch": "main"
-  },
+  "github_repo": "https://github.com/user/repo",
+  "secrets_file": "../connectors/connectors_config.json",
   "retry_interval": 5,
   "retry_limit": 5,
   "retry_delay": 2

@@ -1,0 +1,80 @@
+{
+  "context_meta": {
+    "version": "1.0",
+    "created_at": "2025-10-18",
+    "project": "AutoSync_Final_Core",
+    "assistant_model": "GPT-5",
+    "owner": "shabgarde_tanha"
+  },
+  "mode": {
+    "active": true,
+    "type": "project_analysis",
+    "depth": "high",
+    "style": "thinking_longer",
+    "comparison_enabled": true,
+    "traceability": true
+  },
+  "output": {
+    "format": "structured_JSON",
+    "include_root_cause": true,
+    "include_risks": true,
+    "include_benefits": true,
+    "include_lessons_learned": true
+  },
+  "metrics_framework": {
+    "dimensions": ["Impact", "Confidence", "Effort", "Risk"],
+    "scale": "1-5",
+    "weighted_ranking_enabled": true
+  },
+  "project_structure": {
+    "phases": ["Phase_0", "Phase_1", "Phase_2", "Phase_3", "Phase_4", "Phase_5", "Phase_6", "Phase_7", "Phase_8"],
+    "data_model": ["JSON", "DB", "Markdown"],
+    "core_modules": ["AutoSync Core", "DB Bridge", "Patch Engine", "Analytics", "Dashboard"]
+  },
+  "global_references": {
+    "standards": [
+      "GitHub Engineering Practices",
+      "Atlassian DevOps Playbook",
+      "Google Engineering Productivity Guide",
+      "Martin Fowler Architecture Patterns"
+    ],
+    "comparison_mode": "best_practices"
+  },
+  "logic_prompts": {
+    "continuity_prompt": true,
+    "root_cause_prompt": true,
+    "risk_analysis_prompt": true,
+    "global_standard_prompt": true,
+    "documentation_prompt": true,
+    "lessons_learned_prompt": true,
+    "consistency_check_prompt": true
+  },
+  "temporary_disabled": {
+    "ui_ux_prompt": false,
+    "api_integration_prompt": false,
+    "performance_prompt": false,
+    "user_persona_prompt": false
+  },
+  "phase_tracking": {
+    "current_phase": "Phase_4",
+    "next_phase": "Phase_5",
+    "record_progress": true,
+    "auto_comparison_with_previous": true
+  },
+  "continuity_protocol": {
+    "compare_with_previous_answer": true,
+    "analyze_reason_for_change": true,
+    "auto_correct_if_inconsistent": true,
+    "record_differences": true
+  },
+  "lessons_learned_engine": {
+    "enabled": true,
+    "method": "pattern_extraction",
+    "output": "structured_summary"
+  },
+  "persistence": {
+    "context_storage": "manual_via_user_upload",
+    "reload_in_new_chat": "Phase_0",
+    "backup_format": "json"
+  }
+}

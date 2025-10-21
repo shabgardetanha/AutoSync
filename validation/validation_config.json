@@ -1,0 +1,5 @@
+{
+  "stability_threshold_cpu": 85,
+  "stability_threshold_memory": 85,
+  "stability_threshold_disk": 90
+}
