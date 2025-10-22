@@ -6,7 +6,7 @@ numpy==1.26.1
 
 # Test / Patch
 pytest==8.3.3
-pytest-mock==3.12.1
+pytest-mock==3.15.1
 
 # Dashboard / Visualization
 matplotlib==3.8.0
