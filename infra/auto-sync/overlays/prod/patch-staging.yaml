@@ -1,4 +1,0 @@
-patch-staging.yamlresources:
-  - ../../base
-patchesStrategicMerge:
-  - patch.yaml

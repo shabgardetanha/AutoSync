@@ -8,6 +8,4 @@ spec:
     spec:
       containers:
         - name: autosync
-          env:
-            - name: ENV
-              value: "dev"
+          image: myrepo/autosync:dev

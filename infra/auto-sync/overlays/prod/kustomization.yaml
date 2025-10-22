@@ -1,20 +1,10 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-bases:
+resources:
   - ../../base
 
 namespace: prod
 
-configMapGenerator:
-  - name: autosync-featureflags
-    literals:
-      - prod_mode=true
-    behavior: merge   # ⚠️ merge الزامی
-
-secretGenerator:
-  - name: autosync-secrets
-    literals:
-      - ff_api_key=DEV_API_KEY
-    type: Opaque
-    behavior: merge   # ⚠️ merge الزامی
+patchesStrategicMerge:
+  - deployment-prod-patch.yaml
