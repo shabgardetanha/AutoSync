@@ -12,5 +12,3 @@ secretGenerator:
     literals:
       - ff_api_key=CHANGE_ME
     type: Opaque
-    options:
-      disableNameSuffixHash: true   # تا اسم secret ثابت بماند
