@@ -7,7 +7,7 @@ resources:
 
 secretGenerator:
   - name: autosync-secrets
-    behavior: create
     literals:
       - ff_api_key=CHANGE_ME
     type: Opaque
+    disableNameSuffixHash: true
