@@ -8,6 +8,13 @@ resources:
 secretGenerator:
   - name: autosync-secrets
     literals:
-      - ff_api_key=CHANGE_ME
-    type: Opaque
-    behavior: replace 
+      - ff_api_key=Q0hBTkdFX01F
+    behavior: replace   # ← این باعث می‌شود Secret هر بار جایگزین شود و خطا از بین برود
+
+configMapGenerator:
+  - name: autosync-featureflags
+    files:
+      - featureflags.yml
+
+generatorOptions:
+  disableNameSuffixHash: true 

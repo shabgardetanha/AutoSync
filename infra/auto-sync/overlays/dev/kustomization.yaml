@@ -7,8 +7,5 @@ resources:
   - namespace.yaml
   - ../../base
 
-secretGenerator:
-  - name: autosync-secrets
-    literals:
-      - ff_api_key=CHANGE_ME
-    type: Opaque
+patches:
+  - deployment-patch.yaml
