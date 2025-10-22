@@ -8,4 +8,7 @@ resources:
   - ../../base
 
 patches:
-  - deployment-patch.yaml
+  - path: deployment-patch.yaml
+    target:
+      kind: Deployment
+      name: autosync

@@ -1,20 +1,24 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
+# منابع پایه
 resources:
   - deployment-autosync.yaml
   - featureflags-configmap.yaml
 
-secretGenerator:
-  - name: autosync-secrets
-    literals:
-      - ff_api_key=Q0hBTkdFX01F
-    behavior: replace   # ← این باعث می‌شود Secret هر بار جایگزین شود و خطا از بین برود
-
+# ConfigMap Generator با تعیین behavior
 configMapGenerator:
   - name: autosync-featureflags
     files:
-      - featureflags.yml
+      - featureflags-configmap.yaml
+    behavior: merge   # یا replace اگر می‌خواهید overlay کاملاً جایگزین کند
 
-generatorOptions:
-  disableNameSuffixHash: true 
+# Secret Generator
+secretGenerator:
+  - name: autosync-secrets
+    literals:
+      - ff_api_key=CHANGE_ME
+    type: Opaque
+
+# Optional: namespace پیش‌فرض
+# namespace: default
