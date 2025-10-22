@@ -1,0 +1,4 @@
+scrape_configs:
+  - job_name: 'autosync-core'
+    static_configs:
+      - targets: ['autosync-core-svc.autosync.svc.cluster.local:80']

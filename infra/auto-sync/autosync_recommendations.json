@@ -1,0 +1,10 @@
+{
+  "items": [
+    {"id":"R1-gitops","title":"GitOps (ArgoCD/Flux)","Impact":5,"Confidence":5,"Effort":3,"Risk":2},
+    {"id":"R2-featureflags","title":"Feature Flags & Progressive Delivery","Impact":5,"Confidence":5,"Effort":3,"Risk":2},
+    {"id":"R3-db-migrations","title":"DB Migrations (Flyway)","Impact":5,"Confidence":4,"Effort":3,"Risk":2},
+    {"id":"R4-deps-automation","title":"Dependabot / Renovate","Impact":4,"Confidence":5,"Effort":2,"Risk":2},
+    {"id":"R5-observability","title":"Prometheus/Grafana + SLOs","Impact":5,"Confidence":4,"Effort":2,"Risk":1}
+  ],
+  "sequence":["R1-gitops","R2-featureflags","R3-db-migrations","R4-deps-automation","R5-observability"]
+}

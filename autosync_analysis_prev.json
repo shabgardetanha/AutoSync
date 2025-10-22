@@ -1,0 +1,41 @@
+{
+  "analysis_timestamp": "2025-10-21T18:45:10.831635+00:00",
+  "snapshot_source": "autosync_hybrid_snapshot.json",
+  "metrics": {
+    "total_files": 44,
+    "total_gaps": 38,
+    "total_parse_errors": 38,
+    "total_read_errors": 0,
+    "db_missing": 0,
+    "db_errors": 0,
+    "modules_present": [
+      "core",
+      "tools",
+      "test_patch"
+    ]
+  },
+  "detected_phase": "fix_configs",
+  "phase_explanation": "خطاهای parse/read تشخیص داده شده‌اند؛ ابتدا پیکربندی/کد را اصلاح کنید.",
+  "confidence": 0.8,
+  "risk_level": "high",
+  "next_actions": [
+    {
+      "module": "core",
+      "action": "fix_parse_and_read_errors",
+      "title": "رفع خطاهای parse/read در فایل‌های پیکربندی و کد",
+      "description": "اصلاح JSON/YAML یا کدهای دارای خطا و اجرای مجدد اسکن.",
+      "reason": "Detected phase = fix_configs",
+      "metrics": {
+        "Impact": 5,
+        "Confidence": 0.7,
+        "Confidence_scale": 4,
+        "Effort": 3,
+        "Risk": 2,
+        "weighted_score": 4.0
+      }
+    }
+  ],
+  "previous_analysis_comparison": {
+    "found_previous": false
+  }
+}

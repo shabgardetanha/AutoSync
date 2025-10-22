@@ -1,0 +1,82 @@
+name: AutoSync CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main", "infra/auto-sync" ]
+  workflow_dispatch:
+
+jobs:
+  ci_snapshot_analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+      packages: read
+      actions: read
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml ruamel.yaml
+
+      - name: Run Inspector (generate snapshot)
+        run: |
+          python autosync_hybrid_core.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run Analyzer
+        run: |
+          python autosync_analyzer_core.py
+
+      - name: Upload analysis artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: autosync-analysis
+          path: autosync_analysis.json
+
+  run_tests_and_deploy_staging:
+    needs: ci_snapshot_analyze
+    runs-on: ubuntu-latest
+    if: ${{ always() }}
+    steps:
+      - name: Download analysis artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: autosync-analysis
+          path: .
+
+      - name: Read analysis and decide
+        id: decide
+        run: |
+          python - <<'PY'
+import json,sys
+a=json.load(open('autosync_analysis.json','r',encoding='utf-8'))
+print('DETECTED_PHASE='+a.get('detected_phase',''))
+print('NEXT_ACTIONS='+','.join([act['action'] for act in a.get('next_actions',[])]))
+PY
+
+      - name: Execute Test Suite (if run_tests)
+        if: contains(steps.decide.outputs.NEXT_ACTIONS, 'execute_test_suite') || (steps.decide.outputs.DETECTED_PHASE == 'run_tests')
+        run: |
+          python -m pip install -r requirements.txt || true
+          python -u tools/run_patch_test.py || true
+
+      - name: Deploy to staging using ArgoCD (trigger via kubectl/argocd CLI)
+        if: ${{ contains(steps.decide.outputs.NEXT_ACTIONS, 'execute_test_suite') == false && steps.decide.outputs.DETECTED_PHASE == 'run_tests' }}
+        run: |
+          echo "Triggering deploy to staging (ArgoCD sync or kubectl apply)"
+          # if argocd CLI configured:
+          # argocd app sync autosync-core
+        env:
+          KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}

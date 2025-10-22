@@ -1,0 +1,7 @@
+feature_flags:
+  autodeploy_enabled:
+    default: false
+    description: "اگر true باشد، Autodeploy برای نسخه‌های پایدار فعال است"
+  new_strategy_rollout:
+    default: false
+    description: "آزمایش الگوریتم جدید rollout برای autodeploy"

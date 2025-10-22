@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: autosync
+  labels:
+    app: autosync
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: autosync
+  template:
+    metadata:
+      labels:
+        app: autosync
+    spec:
+      containers:
+        - name: autosync
+          image: your-docker-image:latest
+          env:
+            - name: FEATURE_FLAGS_PATH
+              value: "/config/featureflags.yml"
+            - name: FF_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: autosync-secrets
+                  key: ff_api_key
+          volumeMounts:
+            - name: featureflags
+              mountPath: /config
+              readOnly: true
+      volumes:
+        - name: featureflags
+          configMap:
+            name: autosync-featureflags

@@ -1,0 +1,414 @@
+{
+  "modules": {
+    "core": {
+      "files": {
+        "autosync_repo\\core\\auto_sync_core.py": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [
+            "CoreConfig",
+            "DBHandler",
+            "GitHubSync",
+            "auto_commit_manifest",
+            "core_config",
+            "db_handler",
+            "get_secret",
+            "github_sync",
+            "push_changes",
+            "secrets_manager",
+            "sqlite3",
+            "time",
+            "update_manifest_entry",
+            "utils",
+            "verify_integrity"
+          ],
+          "content_summary": ""
+        },
+        "autosync_repo\\core\\core_config.json": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [
+            "autosync.db",
+            "dashboard/dashboard_config.json",
+            "notifications/notifications_config.json",
+            "analytics_feedback/lessons_learned.json",
+            "../connectors/connectors_config.json"
+          ],
+          "content_summary": ""
+        },
+        "autosync_repo\\core\\core_config.py": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [
+            "Path",
+            "datetime",
+            "hashlib",
+            "json",
+            "pathlib"
+          ],
+          "content_summary": ""
+        },
+        "autosync_repo\\core\\github_sync.py": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [
+            "subprocess"
+          ],
+          "content_summary": ""
+        },
+        "autosync_repo\\core\\lock_manager.py": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [
+            "os"
+          ],
+          "content_summary": ""
+        },
+        "autosync_repo\\core\\retry_lock_manager.py": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [
+            "Lock",
+            "threading",
+            "time"
+          ],
+          "content_summary": ""
+        },
+        "autosync_repo\\core\\secrets_manager.py": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [
+            "json"
+          ],
+          "content_summary": ""
+        },
+        "autosync_repo\\core\\utils\\auto_version_bump.py": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [
+            "auto_commit_manifest",
+            "core",
+            "datetime",
+            "json",
+            "os",
+            "update_manifest_entry"
+          ],
+          "content_summary": ""
+        },
+        "autosync_repo\\core\\utils\\github_auto_commit.py": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [
+            "datetime",
+            "json",
+            "os",
+            "subprocess"
+          ],
+          "content_summary": ""
+        },
+        "autosync_repo\\core\\utils\\manifest_handler.py": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [
+            "datetime",
+            "hashlib",
+            "json",
+            "os"
+          ],
+          "content_summary": ""
+        },
+        "autosync_repo\\core\\utils\\__pycache__\\auto_version_bump.cpython-312.pyc": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [],
+          "content_summary": ""
+        },
+        "autosync_repo\\core\\utils\\__pycache__\\github_auto_commit.cpython-312.pyc": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [],
+          "content_summary": ""
+        },
+        "autosync_repo\\core\\utils\\__pycache__\\manifest_handler.cpython-312.pyc": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [],
+          "content_summary": ""
+        },
+        "autosync_repo\\core\\__pycache__\\auto_sync_core.cpython-312.pyc": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [],
+          "content_summary": ""
+        },
+        "autosync_repo\\core\\__pycache__\\core_config.cpython-312.pyc": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [],
+          "content_summary": ""
+        },
+        "autosync_repo\\core\\__pycache__\\github_sync.cpython-312.pyc": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [],
+          "content_summary": ""
+        },
+        "autosync_repo\\core\\__pycache__\\lock_manager.cpython-312.pyc": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [],
+          "content_summary": ""
+        },
+        "autosync_repo\\core\\__pycache__\\retry_lock_manager.cpython-312.pyc": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [],
+          "content_summary": ""
+        },
+        "autosync_repo\\core\\__pycache__\\secrets_manager.cpython-312.pyc": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [],
+          "content_summary": ""
+        }
+      },
+      "summary": {
+        "total_files": 19,
+        "total_gaps": 0,
+        "total_parse_errors": 0,
+        "total_read_errors": 0,
+        "actions_needed": []
+      }
+    },
+    "tools": {
+      "files": {
+        "autosync_repo\\tools\\auto_report.py": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [
+            "Path",
+            "datetime",
+            "json",
+            "os",
+            "pathlib",
+            "sqlite3",
+            "sys"
+          ],
+          "content_summary": ""
+        },
+        "autosync_repo\\tools\\deploy_demo.py": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [
+            "os",
+            "shutil"
+          ],
+          "content_summary": ""
+        },
+        "autosync_repo\\tools\\health_check.py": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [
+            "Console",
+            "Table",
+            "datetime",
+            "json",
+            "os",
+            "rich",
+            "sqlite3"
+          ],
+          "content_summary": ""
+        },
+        "autosync_repo\\tools\\run_analytics.py": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [
+            "json",
+            "sqlite3"
+          ],
+          "content_summary": ""
+        },
+        "autosync_repo\\tools\\run_core.py": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [
+            "Path",
+            "datetime",
+            "json",
+            "os",
+            "pathlib",
+            "sqlite3",
+            "sys",
+            "threading",
+            "time"
+          ],
+          "content_summary": ""
+        },
+        "autosync_repo\\tools\\run_dashboard.py": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [
+            "sqlite3"
+          ],
+          "content_summary": ""
+        },
+        "autosync_repo\\tools\\run_notifications.py": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [
+            "sqlite3"
+          ],
+          "content_summary": ""
+        },
+        "autosync_repo\\tools\\run_patch_test.py": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [
+            "json",
+            "os",
+            "sqlite3"
+          ],
+          "content_summary": ""
+        },
+        "autosync_repo\\tools\\__pycache__\\auto_report.cpython-312.pyc": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [],
+          "content_summary": ""
+        },
+        "autosync_repo\\tools\\__pycache__\\deploy_demo.cpython-312.pyc": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [],
+          "content_summary": ""
+        },
+        "autosync_repo\\tools\\__pycache__\\health_check.cpython-312.pyc": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [],
+          "content_summary": ""
+        },
+        "autosync_repo\\tools\\__pycache__\\run_analytics.cpython-312.pyc": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [],
+          "content_summary": ""
+        },
+        "autosync_repo\\tools\\__pycache__\\run_core.cpython-312.pyc": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [],
+          "content_summary": ""
+        },
+        "autosync_repo\\tools\\__pycache__\\run_dashboard.cpython-312.pyc": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [],
+          "content_summary": ""
+        },
+        "autosync_repo\\tools\\__pycache__\\run_notifications.cpython-312.pyc": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [],
+          "content_summary": ""
+        },
+        "autosync_repo\\tools\\__pycache__\\run_patch_test.cpython-312.pyc": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [],
+          "content_summary": ""
+        }
+      },
+      "summary": {
+        "total_files": 16,
+        "total_gaps": 0,
+        "total_parse_errors": 0,
+        "total_read_errors": 0,
+        "actions_needed": []
+      }
+    },
+    "test_patch": {
+      "files": {
+        "autosync_repo\\test_patch\\patch_batch_runner.py": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [
+            "DBHandler",
+            "db_handler"
+          ],
+          "content_summary": ""
+        },
+        "autosync_repo\\test_patch\\test_manifest_commit_integration.py": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [
+            "auto_commit_manifest",
+            "check_git_status",
+            "core",
+            "datetime",
+            "json",
+            "os",
+            "update_manifest_entry"
+          ],
+          "content_summary": ""
+        },
+        "autosync_repo\\test_patch\\test_suite.py": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [
+            "DBHandler",
+            "db_handler",
+            "json"
+          ],
+          "content_summary": ""
+        },
+        "autosync_repo\\test_patch\\snapshots\\__init__.py": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [],
+          "content_summary": ""
+        },
+        "autosync_repo\\test_patch\\snapshots\\__pycache__\\__init__.cpython-312.pyc": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [],
+          "content_summary": ""
+        },
+        "autosync_repo\\test_patch\\__pycache__\\patch_batch_runner.cpython-312.pyc": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [],
+          "content_summary": ""
+        },
+        "autosync_repo\\test_patch\\__pycache__\\test_manifest_commit_integration.cpython-312.pyc": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [],
+          "content_summary": ""
+        },
+        "autosync_repo\\test_patch\\__pycache__\\test_suite.cpython-312.pyc": {
+          "status": "exists",
+          "gaps": [],
+          "dependencies": [],
+          "content_summary": ""
+        }
+      },
+      "summary": {
+        "total_files": 8,
+        "total_gaps": 0,
+        "total_parse_errors": 0,
+        "total_read_errors": 0,
+        "actions_needed": []
+      }
+    }
+  },
+  "overall_summary": {
+    "total_files": 43,
+    "total_gaps": 0,
+    "total_parse_errors": 0,
+    "total_read_errors": 0,
+    "status": "All files exist, no GAP detected.",
+    "actions_needed": []
+  },
+  "inspected_at_utc": "2025-10-21T19:10:38.865923+00:00"
+}

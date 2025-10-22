@@ -1,0 +1,77 @@
+{
+  "core": {
+    "files_status": {
+      "autosync_repo\\core_manifest.json": "exists",
+      "autosync_repo\\setup_autosync_final_core_v2.py": "exists",
+      "autosync_repo\\core": "exists",
+      "autosync_repo\\core\\auto_sync_core.py": "exists",
+      "autosync_repo\\core\\core_config.json": "exists",
+      "autosync_repo\\core\\core_config.py": "exists",
+      "autosync_repo\\core\\github_sync.py": "exists",
+      "autosync_repo\\core\\lock_manager.py": "exists",
+      "autosync_repo\\core\\retry_lock_manager.py": "exists",
+      "autosync_repo\\core\\secrets_manager.py": "exists",
+      "autosync_repo\\core\\utils": "exists",
+      "autosync_repo\\core\\utils\\auto_version_bump.py": "exists",
+      "autosync_repo\\core\\utils\\github_auto_commit.py": "exists",
+      "autosync_repo\\core\\utils\\manifest_handler.py": "exists",
+      "autosync_repo\\docs\\legacy_and_core": "exists",
+      "autosync_repo\\docs\\legacy_and_core\\autosync_best_practices.md": "exists",
+      "autosync_repo\\docs\\legacy_and_core\\autosync_database_plan.md": "exists",
+      "autosync_repo\\docs\\legacy_and_core\\autosync_feedback_protocol.md": "exists",
+      "autosync_repo\\docs\\legacy_and_core\\autosync_final_core_v1.md": "exists",
+      "autosync_repo\\docs\\legacy_and_core\\autosync_system_structure.md": "exists",
+      "autosync_repo\\docs\\legacy_and_core\\autosync_testing_protocol.md": "exists",
+      "autosync_repo\\docs\\legacy_and_core\\CHANGELOG.md": "exists",
+      "autosync_repo\\docs\\reference\\autosync_final_core_reference.json": "exists",
+      "autosync_repo\\docs\\reference\\autosync_final_core_reference_v2.1.json": "exists",
+      "autosync_repo\\docs\\reference\\autosync_final_core_reference_v2.2.json": "exists",
+      "autosync_repo\\tools\\run_core.py": "exists"
+    },
+    "dependencies_diff": {},
+    "db_schema_diff": {},
+    "summary": {
+      "total_files": 26,
+      "total_gaps": 0,
+      "actions_needed": []
+    }
+  },
+  "tools": {
+    "files_status": {
+      "autosync_repo\\tools": "exists",
+      "autosync_repo\\tools\\auto_report.py": "exists",
+      "autosync_repo\\tools\\deploy_demo.py": "exists",
+      "autosync_repo\\tools\\health_check.py": "exists",
+      "autosync_repo\\tools\\run_analytics.py": "exists",
+      "autosync_repo\\tools\\run_core.py": "exists",
+      "autosync_repo\\tools\\run_dashboard.py": "exists",
+      "autosync_repo\\tools\\run_notifications.py": "exists",
+      "autosync_repo\\tools\\run_patch_test.py": "exists"
+    },
+    "dependencies_diff": {},
+    "db_schema_diff": {},
+    "summary": {
+      "total_files": 9,
+      "total_gaps": 0,
+      "actions_needed": []
+    }
+  },
+  "test_patch": {
+    "files_status": {
+      "autosync_repo\\test_patch": "exists",
+      "autosync_repo\\test_patch\\patch_batch_runner.py": "exists",
+      "autosync_repo\\test_patch\\test_manifest_commit_integration.py": "exists",
+      "autosync_repo\\test_patch\\test_suite.py": "exists",
+      "autosync_repo\\test_patch\\snapshots": "exists",
+      "autosync_repo\\test_patch\\snapshots\\__init__.py": "exists"
+    },
+    "dependencies_diff": {},
+    "db_schema_diff": {},
+    "summary": {
+      "total_files": 6,
+      "total_gaps": 0,
+      "actions_needed": []
+    }
+  },
+  "inspected_at_utc": "2025-10-21T08:33:51.890365+00:00"
+}
