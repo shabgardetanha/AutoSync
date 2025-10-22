@@ -5,12 +5,9 @@ resources:
   - deployment-autosync.yaml
   - featureflags-configmap.yaml
 
-generatorOptions:
-  disableNameSuffixHash: true
-
 secretGenerator:
   - name: autosync-secrets
     literals:
       - ff_api_key=CHANGE_ME
     type: Opaque
-    behavior: replace
+    behavior: replace   # <-- اضافه شود
