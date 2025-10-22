@@ -10,4 +10,3 @@ secretGenerator:
     literals:
       - ff_api_key=CHANGE_ME
     type: Opaque
-    behavior: replace   # <-- اضافه شود
