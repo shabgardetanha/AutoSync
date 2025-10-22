@@ -5,8 +5,15 @@ resources:
   - deployment-autosync.yaml
   - featureflags-configmap.yaml
 
+configMapGenerator:
+  - name: autosync-featureflags
+    files:
+      - featureflags-configmap.yaml
+    behavior: merge   # ⚠️ بسیار مهم
+
 secretGenerator:
   - name: autosync-secrets
     literals:
       - ff_api_key=CHANGE_ME
     type: Opaque
+    behavior: merge   # ⚠️ اگر در overlayها override می‌کنیم
