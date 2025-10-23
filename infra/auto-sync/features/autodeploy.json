@@ -1,0 +1,13 @@
+{
+  "featureFlags": {
+    "autodeploy": {
+      "enabled": false,
+      "targets": [
+        {"environment": "staging", "percentage": 100},
+        {"environment": "production", "percentage": 0}
+      ],
+      "default": false,
+      "description": "کنترل rollout خودکار autodeploy در prod"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+name: Canary Rollout - AutoDeploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  rollout:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Set initial rollout (10% prod)
+        run: |
+          echo "فعال‌سازی 10% autodeploy در prod"
+          bash infra/auto-sync/scripts/flag_update.sh autodeploy 10 production
+
+      - name: Monitor Metrics
+        run: |
+          bash infra/auto-sync/scripts/monitor_metrics.sh production
+
+      - name: Gradual Increase
+        run: |
+          echo "در صورت سالم بودن metrics، افزایش rollout به 50%"
+          bash infra/auto-sync/scripts/flag_update.sh autodeploy 50 production
+          bash infra/auto-sync/scripts/monitor_metrics.sh production
+          
+          echo "در صورت سالم بودن metrics، افزایش rollout به 100%"
+          bash infra/auto-sync/scripts/flag_update.sh autodeploy 100 production
+          bash infra/auto-sync/scripts/monitor_metrics.sh production

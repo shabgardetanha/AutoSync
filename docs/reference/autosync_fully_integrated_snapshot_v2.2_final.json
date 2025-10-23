@@ -1,0 +1,387 @@
+{
+  "meta": {
+    "version": "v2.3_hybrid_full_merge_v2.2_operational",
+    "generated_at": "2025-10-23T14:45+0330",
+    "source_baselines": [
+      "autosync_active_context_snapshot_v2.2.json",
+      "autosync_v2.3_hybrid_integrated.json"
+    ],
+    "merge_strategy": "non-destructive_full_union",
+    "traceability_mode": "strict_full",
+    "commit_ref": "autosync_merged_final_operational_001"
+  },
+  "layer_system": {
+    "model": "GPT-5",
+    "safety_mode": "active",
+    "reasoning_constraints": {
+      "hidden_thoughts": false,
+      "no_private_tokens": true,
+      "chain_of_thought_visibility": "restricted"
+    },
+    "rules": {
+      "language_policy": "Persian (fa-IR) priority",
+      "format_policy": "JSON",
+      "global_safety": [
+        "no personal data retention",
+        "no sensitive data storage"
+      ]
+    }
+  },
+  "layer_user": {
+    "role": "تحلیل‌گر حرفه‌ای پروژه‌های توسعه کد",
+    "style_rules": {
+      "thinking_mode": "thinking hard / thinking longer",
+      "structure": "JSON with standard fields",
+      "criteria": ["Impact","Confidence","Effort","Risk"],
+      "comparison_required": true,
+      "always_include_weakness_first": true,
+      "compare_with_previous_answer": true,
+      "risk_analysis_required": true
+    },
+    "project_behavior": {
+      "deep_analysis": true,
+      "multi_phase_logic": true,
+      "auto_traceability": true,
+      "global_lessons_learned_tracking": true,
+      "context_continuity": "cross-chat expected"
+    },
+    "communication_preference": {
+      "language": "Persian",
+      "tone": "professional, analytical, root-cause-focused",
+      "verbosity": "high",
+      "precision": "strict"
+    }
+  },
+  "layer_adaptive": {
+    "active_modules": [
+      "root_cause_analysis",
+      "context_continuity_check",
+      "cross_phase_comparison",
+      "version_snapshot_alignment",
+      "adaptive_depth_scaling",
+      "auto_lessons_learned_extraction",
+      "risk_weight_balancing",
+      "incremental_context_memory_emulation"
+    ],
+    "learning_biases": {
+      "emphasis_on_previous_lessons": 0.92,
+      "avoid_redundancy": 0.88,
+      "depth_priority_weight": 0.95,
+      "traceability_focus": 0.9,
+      "accuracy_over_speed": true
+    },
+    "automatic_reinforcement_rules": {
+      "if_user_says_'بله'": "advance to next verification phase",
+      "if_user_says_'دقیق تر بگرد'": "increase search depth +20%",
+      "if_user_mentions_'نسخه' or 'مقایسه'": "activate version_diff_mode",
+      "if_user_mentions_'lesson learned'": "trigger feedback_loop_update"
+    }
+  },
+  "layer_runtime_flags": {
+    "compare_with_previous_answer": true,
+    "traceability_mode": "strict",
+    "contextual_continuity": "enabled",
+    "snapshot_comparison_active": true,
+    "auto_phase_tracker": "v1.2",
+    "db_reference_active": true,
+    "risk_matrix_mode": "4D",
+    "patch_tracking_enabled": true,
+    "dashboard_mode": "analytic_summary",
+    "ci_cd_pipeline_state": "ready",
+    "lessons_learned_auto_update": true
+  },
+  "temporal_context": {
+    "conversation_start": "2025-10-18T20:10+0330",
+    "conversation_phase": "Phase_7_Documentation → Phase_8_End_of_Chat",
+    "previous_checkpoints": [
+      "autosync_final_core_v2 confirmed",
+      "60 markdown + python files validated",
+      "core/config alignment verified",
+      "comparison to previous versions done"
+    ]
+  },
+  "project_operational_context": {
+    "repository": "https://github.com/shabgardetanha/SGT",
+    "active_modules": [
+      "core/auto_sync_core.py",
+      "core/config_handler.py",
+      "core/github_sync.py",
+      "core/retry_lock_manager.py",
+      "core/core_config.json",
+      "core/patch_batch_runner.py",
+      "core/test_suite.py",
+      "core/ci_cd_runner.py",
+      "core/continuous_improvement.py",
+      "core/trend_analytics.py",
+      "core/auto_feedback_engine.py",
+      "core/manifest_auto_updater.py",
+      "core/autodeploy_orchestrator.py",
+      "core/rollback_manager.py",
+      "modules/git_sync.py",
+      "modules/drive_sync.py",
+      "modules/telegram_hook.py",
+      "ui/auto_sync_dashboard.py",
+      "scripts/autosync_analyzer_core.py",
+      "scripts/autosync_db_handler.py",
+      "scripts/autosync_hybrid_core.py",
+      "helpers/config_parser.py",
+      "helpers/logger.py",
+      "helpers/utilities.py",
+      "nested_config/core_patch_config.json",
+      "nested_config/ui_theme_config.json",
+      "nested_config/db_settings.json",
+      "nested_config/ci_cd_pipeline.json",
+      "tests/unit/test_core.py",
+      "tests/integration/test_db_sync.py",
+      "docs/README.md",
+      "docs/CHANGELOG.md",
+      "docs/INSTALL.md"
+    ],
+    "dependencies": {
+      "language": "Python 3.11+",
+      "framework": ["FastAPI","SQLAlchemy","Watchdog"],
+      "sync_backends": ["GitHub","Google Drive","Telegram API"]
+    }
+  },
+  "file_inventory": {
+    "status": "active",
+    "include": true,
+    "files": [
+      {
+        "path": "core/auto_sync_core.py",
+        "type": "python",
+        "status": "operational",
+        "version": "v2.2.0",
+        "last_modified": "2025-10-19",
+        "dependencies": ["core/retry_lock_manager.py","core/core_config.json","core/github_sync.py","test_patch/patch_batch_runner.py"],
+        "content_summary": "Orchestrator for push/retry/lock cycles; coordinates github sync, patch runner and feedback engine. Uses DB for snapshot and push logs.",
+        "action_needed": "none",
+        "phase": "engine"
+      },
+      {
+        "path": "core/config_handler.py",
+        "type": "python",
+        "status": "operational",
+        "version": "v2.1.0",
+        "last_modified": "2025-10-19",
+        "dependencies": [],
+        "content_summary": "Handles loading, validation, and saving of core configuration; integrates with secrets manager if needed.",
+        "action_needed": "Ensure safe handling of secrets; add schema validation",
+        "phase": "setup"
+      },
+      {
+        "path": "core/github_sync.py",
+        "type": "python",
+        "status": "operational",
+        "version": "v2.1.0",
+        "last_modified": "2025-10-19",
+        "dependencies": [],
+        "content_summary": "Git operations wrapper (git add/commit/push), supports retry/backoff and optional locking. Placeholder for GitHub API token usage.",
+        "action_needed": "replace local subprocess pushes with robust GitHub API calls if required (optionally use Octokit/GitHub REST).",
+        "phase": "integration"
+      },
+      {
+        "path": "core/retry_lock_manager.py",
+        "type": "python",
+        "status": "operational",
+        "version": "v2.0.0",
+        "last_modified": "2025-10-17",
+        "dependencies": [],
+        "content_summary": "Provides lock acquire/release and retry scheduling; basic file-lock implementation and retry_later helper.",
+        "action_needed": "Consider using DB-backed advisory locks for distributed runners.",
+        "phase": "support"
+      },
+      {
+        "path": "core/core_config.json",
+        "type": "config/json",
+        "status": "operational",
+        "version": "1.2.1",
+        "last_modified": "2025-10-19",
+        "dependencies": [],
+        "content_summary": "Contains db_path, lock file path, retry intervals, snapshot and patch folder locations, dashboard and notifications config paths.",
+        "example": {
+          "db_path": "autosync.db",
+          "lock_file": "core/core.lock",
+          "push_retry_interval_sec": 2,
+          "max_retries": 3
+        },
+        "action_needed": "Ensure secrets (if any) not stored here; use secrets manager.",
+        "phase": "config"
+      },
+      {
+        "path": "core/patch_batch_runner.py",
+        "type": "python",
+        "status": "operational",
+        "version": "v2.1.0",
+        "last_modified": "2025-10-19",
+        "dependencies": ["test_patch/snapshots (DB)","core/core_config.json"],
+        "content_summary": "Applies patch batches from configured folder; logs results into patch_results DB table and notifies analytics.",
+        "action_needed": "Migrate snapshot reads from JSON to DB queries if not already.",
+        "phase": "engine"
+      },
+      {
+        "path": "core/test_suite.py",
+        "type": "python",
+        "status": "operational",
+        "version": "v2.0.0",
+        "last_modified": "2025-10-17",
+        "dependencies": ["test_patch/snapshots DB"],
+        "content_summary": "Executes tests against snapshots; writes test results to DB table test_results.",
+        "action_needed": "Expand actual test logic for real asserts; integrate unit/integration tests.",
+        "phase": "test"
+      },
+      {
+        "path": "core/ci_cd_runner.py",
+        "type": "python",
+        "status": "operational (template)",
+        "version": "v2.0.0",
+        "last_modified": "2025-10-19",
+        "dependencies": [".github workflows","tools/auto_report.py"],
+        "content_summary": "Legacy helper for local pipeline orchestration; CI/CD now primary via GitHub Actions YAML.",
+        "action_needed": "Optional: keep for local runs; ensure parity with YAML definitions.",
+        "phase": "ci_cd"
+      },
+      {
+        "path": "core/continuous_improvement.py",
+        "type": "python",
+        "status": "operational",
+        "version": "v2.1.0",
+        "last_modified": "2025-10-19",
+        "dependencies": ["trend_analytics.py","auto_feedback_engine.py"],
+        "content_summary": "Module for analyzing trends and suggesting continuous improvements to core processes.",
+        "action_needed": "Integrate with analytics dashboard; validate improvement suggestions before auto-apply.",
+        "phase": "ci_cd"
+      },
+      {
+        "path": "core/trend_analytics.py",
+        "type": "python",
+        "status": "operational",
+        "version": "v2.1.0",
+        "last_modified": "2025-10-19",
+        "dependencies": [],
+        "content_summary": "Performs trend analysis on patch results and deployment KPIs; triggers feedback engine for anomalies.",
+        "action_needed": "Validate trend detection thresholds; tune alerting for false positives.",
+        "phase": "analytics"
+      },
+      {
+        "path": "core/auto_feedback_engine.py",
+        "type": "python",
+        "status": "added_in_v2.1",
+        "version": "v2.1.0",
+        "last_modified": "2025-10-19",
+        "dependencies": ["trend_analytics.py","core_manifest.json","ci_cd_runner.py"],
+        "content_summary": "Central engine creating closed-loop feedback: triggers configuration updates, auto-deploy decisions, or generates improvement tickets.",
+        "action_needed": "Review guardrails to avoid recursive updates; add version-lock constraints.",
+        "phase": "feedback"
+      },
+      {
+        "path": "core/manifest_auto_updater.py",
+        "type": "python",
+        "status": "added_in_v2.1",
+        "version": "v2.1.0",
+        "last_modified": "2025-10-19",
+        "dependencies": ["core_manifest.json","github_sync.py"],
+        "content_summary": "Auto-updates core_manifest.json on file/version changes and can optionally commit changes to repo.",
+        "action_needed": "Ensure commit credentials and permission model configured; prevent infinite commit loops (use [skip ci] tag).",
+        "phase": "manifest"
+      },
+      {
+        "path": "core/autodeploy_orchestrator.py",
+        "type": "python",
+        "status": "added_in_v2.2",
+        "version": "v2.2.0",
+        "last_modified": "2025-10-19",
+        "dependencies": ["auto_feedback_engine.py","rollback_manager.py","ci_cd_health_monitor.py"],
+        "content_summary": "Decision engine for autonomous deploys. Evaluates KPI thresholds and executes deployments or rollbacks.",
+        "action_needed": "Simulate deployments in staging before enabling production auto-deploy.",
+        "phase": "deployment"
+      },
+      {
+        "path": "core/rollback_manager.py",
+        "type": "python",
+        "status": "added_in_v2.2",
+        "version": "v2.2.0",
+        "last_modified": "2025-10-19",
+        "dependencies": ["autodeploy_orchestrator.py","trend_analytics.py"],
+        "content_summary": "Monitors deployed builds and executes rollback if performance drops beyond thresholds; supports multi-step rollback policies.",
+        "action_needed": "Add audited logs and notification hooks for human review on critical rollbacks.",
+        "phase": "deployment"
+      },
+      {
+        "path": "modules/git_sync.py",
+        "type": "python",
+        "status": "operational",
+        "phase": "integration"
+      },
+      {
+        "path": "modules/drive_sync.py",
+        "type": "python",
+        "status": "operational",
+        "phase": "integration"
+      },
+      {
+        "path": "modules/telegram_hook.py",
+        "type": "python",
+        "status": "operational",
+        "phase": "notification"
+      },
+      {
+        "path": "ui/auto_sync_dashboard.py",
+        "type": "python",
+        "status": "operational",
+        "phase": "monitoring"
+      },
+      {
+        "path": "scripts/autosync_analyzer_core.py",
+        "type": "python",
+        "status": "operational",
+        "phase": "diagnostic"
+      },
+      {
+        "path": "scripts/autosync_db_handler.py",
+        "type": "python",
+        "status": "operational",
+        "phase": "database"
+      },
+      {
+        "path": "scripts/autosync_hybrid_core.py",
+        "type": "python",
+        "status": "operational",
+        "phase": "orchestration"
+      }
+    ],
+    "trace_binding": {
+      "version": "v2.3_hybrid_full_merge_v2.2_operational",
+      "commit_ref": "autosync_merged_final_operational_001",
+      "verified_at": "2025-10-23T14:45+0330"
+    }
+  },
+  "phase_modules": {
+    "phase_1": "Initialization",
+    "phase_2": "Repository Scan",
+    "phase_3": "AutoSync Analyzer",
+    "phase_4": "Hybrid Core Orchestration",
+    "phase_5": "Database & Drive Sync",
+    "phase_6": "Notification Hooks",
+    "phase_7": "Documentation",
+    "phase_8": "Review & Lessons Learned",
+    "phase_9": "Unit & Integration Tests",
+    "phase_10": "CI/CD Pipeline Execution"
+  },
+  "lessons_learned": {
+    "key_findings": [
+      "Traceability gaps appear when structural and semantic layers diverge.",
+      "File-level inventory must be maintained across all chat snapshots.",
+      "Deep merge should preserve reasoning layers and operational layers simultaneously.",
+      "Always check removed items to avoid silent data loss.",
+      "Nested configs and helper scripts are critical for full operational readiness."
+    ],
+    "recommendations": [
+      "Always store code-level and meta-level data together.",
+      "Version control of analysis JSONs via Git ensures reproducibility.",
+      "Enable automatic diff checking before merging any context snapshot.",
+      "Verify each phase’s modules are included in the file_inventory before finalizing.",
+      "Load-ready JSON should include all nested config, helpers, tests and docs."
+    ]
+  }
+}
