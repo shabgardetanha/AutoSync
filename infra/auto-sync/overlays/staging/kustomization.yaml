@@ -4,11 +4,13 @@ kind: Kustomization
 namespace: staging
 
 resources:
-  - namespace.yaml
   - ../../base
+  - namespace.yaml
+  - staging-patch.yaml
 
+# Patch فقط تغییرات لازم روی Deployment اعمال می‌کند
 patches:
   - path: staging-patch.yaml
     target:
-      kind: Staging
+      kind: Deployment
       name: autosync

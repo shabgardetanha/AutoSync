@@ -6,10 +6,10 @@ namespace: prod
 resources:
   - ../../base
   - namespace.yaml
-  - prodation-patch.yaml
+  - production-patch.yaml
 
 patches:
-  - path: prodation-patch.yaml
+  - path: production-patch.yaml
     target:
-      kind: Prodation
+      kind: Production
       name: autosync
