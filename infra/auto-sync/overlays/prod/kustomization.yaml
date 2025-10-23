@@ -4,11 +4,12 @@ kind: Kustomization
 namespace: prod
 
 resources:
-  - namespace.yaml
   - ../../base
+  - namespace.yaml
+  - prodation-patch.yaml
 
-secretGenerator:
-  - name: autosync-secrets
-    literals:
-      - ff_api_key=CHANGE_ME
-    type: Opaque
+patches:
+  - path: prodation-patch.yaml
+    target:
+      kind: Prodation
+      name: autosync

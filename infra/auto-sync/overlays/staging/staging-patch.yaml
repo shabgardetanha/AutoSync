@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Staging
+metadata:
+  name: autosync
+spec:
+  template:
+    spec:
+      containers:
+        - name: autosync
+          image: myrepo/autosync:staging
+          env:
+            - name: FEATURE_FLAGS_PATH
+              value: /config/featureflags.yml
+            - name: FF_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: autosync-secrets
+                  key: ff_api_key
+          volumeMounts:
+            - mountPath: /config
+              name: featureflags
+              readOnly: true
+      volumes:
+        - name: featureflags
+          configMap:
+            name: autosync-featureflags

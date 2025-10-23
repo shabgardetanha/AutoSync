@@ -7,8 +7,8 @@ resources:
   - namespace.yaml
   - ../../base
 
-secretGenerator:
-  - name: autosync-secrets
-    literals:
-      - ff_api_key=CHANGE_ME
-    type: Opaque
+patches:
+  - path: staging-patch.yaml
+    target:
+      kind: Staging
+      name: autosync
