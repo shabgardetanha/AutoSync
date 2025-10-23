@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Production
+kind: Deployment
 metadata:
   name: autosync
 spec:
