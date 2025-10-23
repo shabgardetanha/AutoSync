@@ -6,7 +6,6 @@ namespace: prod
 resources:
   - ../../base
   - namespace.yaml
-  - production-patch.yaml
 
 patches:
   - path: production-patch.yaml
