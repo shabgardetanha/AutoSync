@@ -6,7 +6,6 @@ namespace: staging
 resources:
   - ../../base
   - namespace.yaml
-  - staging-patch.yaml
 
 # Patch فقط تغییرات لازم روی Deployment اعمال می‌کند
 patches:
